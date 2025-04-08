@@ -11,7 +11,7 @@ const addRepo = async (filepath) => {
         await fs.copyFile(filepath , path.join(stagePath, fileName));
         console.log(`File ${fileName} added to the staging area`);
     } catch (error) {
-        console.error("error in staging the files");
+        console.error("error in staging the files ", error);
     }
 }
 
